@@ -1,0 +1,42 @@
+# MCP 健康提醒系统
+
+本项目是一个基于 Model Context Protocol (MCP) 的健康提醒系统。
+
+## 如何在 Cursor 中使用
+
+### 1. 确保项目已编译
+运行: `npm run build`
+
+### 2. 配置 MCP Server
+
+在 Cursor Settings (JSON) 中添加:
+
+```json
+{
+  "mcp.servers": {
+    "health-reminder": {
+      "command": "node",
+      "args": ["C:\\Users\\WB-bw0017\\Desktop\\MyMCP\\health\\dist\\server\\index.js"]
+    }
+  }
+}
+```
+
+或者在 Claude Dev 设置中添加到 `cline_mcp_settings.json`。
+
+### 3. 可用工具
+
+- `start_reminder`: 启动健康提醒（参数: interval, message, title, sound）
+- `stop_reminder`: 停止健康提醒
+- `get_status`: 查看当前状态
+- `send_immediate_reminder`: 立即发送提醒
+
+### 4. 使用示例
+
+在 Cursor AI 对话框中:
+- "启动健康提醒，每30分钟一次"
+- "停止健康提醒"
+- "查看健康提醒状态"
+- "立即发送一次测试通知"
+
+

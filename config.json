@@ -1,0 +1,9 @@
+{
+  "reminder": {
+    "interval": 30,
+    "message": "该起身活动一下了！久坐对健康不利，建议站起来走动走动。",
+    "title": "健康提醒",
+    "sound": true
+  }
+}
+

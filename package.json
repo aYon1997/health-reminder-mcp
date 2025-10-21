@@ -1,0 +1,63 @@
+{
+  "name": "health-reminder-mcp",
+  "version": "1.0.0",
+  "description": "基于 MCP 的健康提醒系统，定时弹出通知提醒您休息，保护健康",
+  "type": "module",
+  "main": "dist/server/index.js",
+  "bin": {
+    "health-reminder-mcp": "dist/server/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md",
+    "config.example.json"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "server": "node dist/server/index.js",
+    "client": "node dist/client/index.js",
+    "dev:server": "tsc && node dist/server/index.js",
+    "dev:client": "tsc && node dist/client/index.js",
+    "prepublishOnly": "npm run build",
+    "prepack": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "model-context-protocol",
+    "health",
+    "reminder",
+    "notification",
+    "cursor",
+    "health-reminder",
+    "break-reminder",
+    "desktop-notification",
+    "productivity",
+    "wellness"
+  ],
+  "author": "jackhxy <1057878422@qq.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jackhxy/health-reminder-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jackhxy/health-reminder-mcp/issues"
+  },
+  "homepage": "https://github.com/jackhxy/health-reminder-mcp#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "node-notifier": "^10.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/node-notifier": "^8.0.5",
+    "typescript": "^5.3.3"
+  }
+}
+

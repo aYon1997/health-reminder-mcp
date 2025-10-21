@@ -1,0 +1,20 @@
+{
+  "mcpServers": {
+    "health-reminder": {
+      "command": "node",
+      "args": [
+        "C:\\Users\\WB-bw0017\\Desktop\\MyMCP\\health\\dist\\server\\index.js"
+      ],
+      "disabled": false,
+      "alwaysAllow": [],
+      "timeout": 60000,
+      "env": {
+        "REMINDER_INTERVAL": "0.1",
+        "REMINDER_MESSAGE": "该起身活动一下了！久坐对健康不利，建议站起来走动走动。",
+        "REMINDER_TITLE": "健康提醒",
+        "REMINDER_SOUND": "true"
+      }
+    }
+  }
+}
+
