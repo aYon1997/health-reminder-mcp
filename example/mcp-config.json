@@ -1,0 +1,63 @@
+{
+  "mcpServers": {
+    "health-reminder": {
+      "command": "node",
+      "args": ["path/to/dist/server/index.js"],
+      "description": "健康提醒系统 - 定时提醒起身活动",
+      "schema": {
+        "tools": [
+          {
+            "name": "start_reminder",
+            "description": "启动健康提醒定时器",
+            "parameters": {
+              "interval": {
+                "type": "number",
+                "description": "提醒间隔（分钟）",
+                "default": 30
+              },
+              "message": {
+                "type": "string",
+                "description": "提醒消息内容"
+              },
+              "title": {
+                "type": "string",
+                "description": "通知标题"
+              },
+              "sound": {
+                "type": "boolean",
+                "description": "是否播放提示音"
+              }
+            }
+          },
+          {
+            "name": "stop_reminder",
+            "description": "停止健康提醒定时器"
+          },
+          {
+            "name": "get_status",
+            "description": "获取当前状态"
+          },
+          {
+            "name": "send_immediate_reminder",
+            "description": "立即发送提醒",
+            "parameters": {
+              "message": {
+                "type": "string",
+                "description": "提醒消息"
+              },
+              "title": {
+                "type": "string",
+                "description": "通知标题"
+              },
+              "sound": {
+                "type": "boolean",
+                "description": "是否播放提示音"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}
+
